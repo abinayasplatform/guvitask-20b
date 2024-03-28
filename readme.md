@@ -6,10 +6,10 @@ This task is about fetching the data from the ISRO api ["https://isro.vercel.app
 
 It displays
 
-a. Id 
-b. country
-c. Launch-Date
-d. Mass
-e. Launcher
-
+a. Id   
+b. country   
+c. Launch-Date   
+d. Mass   
+e. Launcher   
+   
  by using Promise and Fetch.
