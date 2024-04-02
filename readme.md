@@ -1,15 +1,8 @@
 Name : R Abinaya   
 Batch : FSD56WD2-T   
-Task : Day20   
+Task : Day20-b   
 
-This task is about fetching the data from the ISRO api ["https://isro.vercel.app/api/customer_satellites"] 
+This task is about fetching the data from
+["https://yesno.wtf/api"] and
 
-It displays
-
-a. Id   
-b. country   
-c. Launch-Date   
-d. Mass   
-e. Launcher   
-   
- by using Promise and Fetch.
+Displaying the images of YES or No using Promise & Fetch.

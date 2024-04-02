@@ -1,34 +1,20 @@
-
-const satelite = document.getElementsByClassName("satelite")[0];
-
-function sateliteDetails() {
-  const url = "https://isro.vercel.app/api/customer_satellites";
-
-  
-  fetch(url)
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-
-        
-      data.customer_satellites.forEach((element) => {
-        const card = document.createElement("div");
-        card.setAttribute("class", "card");
-        card.setAttribute("style", "width: 18rem; background-color:lightgreen; border:4px dotted black;");
-        
-        card.innerHTML += `
-                <div class="card-body">
-                  <h5 class="card-title">${element.country}</h5>
-                  <h6 class="card-subtitle mb-2 text-body-secondary">${element.launch_date}</h6>
-                  <p class="card-text">ID : ${element.id}</p>
-                  <p class="card-text">Mass : ${element.mass} Kilograms</p>
-                  <p class="card-text">Launcher : ${element.launcher}</p>
-                  </div>`;
-        satelite.append(card);
-      });
-    }).catch((error)=>console.log(error))
-}
+const mainDiv = document.getElementById("mainDiv");
+const getDetails = document.getElementById("getDetails");
 
 
-sateliteDetails();
+getDetails.addEventListener("click", async () => {
+  //!using the universities api to fetch the data from server.
+  const res1 = await fetch(
+    "https://yesno.wtf/api"
+  );
+  const data1 = await res1.json();
+  console.log(data1);
+    const output1 = document.getElementById("api1");
+    if(data1.answer==="yes"){
+    output1.innerHTML  = ` <strong>👌👍 YES 👍👌 </strong><br> <img src="${data1.image}"height="350px" alt="Yes / No">`;
+    }
+    else{
+      output1.innerHTML  = `<strong> 👎👎NO 👎👎</strong><br><img src="${data1.image}"height="350px" alt="Yes / No">`;
+    }
+
+});
